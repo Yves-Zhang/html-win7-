@@ -62,8 +62,8 @@
 		function mouthDays(year,mouth){
 			var index=1;                                       //每月第一天是1号
 			var realmouth=mouth-1
-			var aaa=new Date(year,realmouth+2,0)
-			var d=aaa.getDate();                               //当前月有多少天；
+			var currDate=new Date(year,realmouth+2,0)
+			var d=currDate.getDate();                               //当前月有多少天；
 			var a=new Date(year,(mouth),0).getDay()+1;         //当前月第一天是星期几；
 		
 			var table=document.getElementsByTagName('table')[0];
@@ -119,7 +119,7 @@
 				}
 			}
 
-			rili.innerHTML=aaa.getFullYear()+'年'+(aaa.getMonth()+1)+'月'+indexDay+'日';
+			rili.innerHTML=currDate.getFullYear()+'年'+(currDate.getMonth()+1)+'月'+indexDay+'日';
 		}
 
 
